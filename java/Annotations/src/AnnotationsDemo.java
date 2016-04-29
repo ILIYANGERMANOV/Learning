@@ -3,6 +3,8 @@ import annotations.TesterInfo;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
+import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class AnnotationsDemo {
     public static void main(String[] args) throws Exception {
@@ -64,7 +66,6 @@ public class AnnotationsDemo {
             } else {
                 System.out.printf("%s - Method '%s' is not test", ++count, method.getName());
             }
-
         }
         System.out.printf("%nResult : Total : %d, Passed: %d, Failed %d, Ignore %d%n", count, passed, failed, ignore);
 
