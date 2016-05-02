@@ -1,6 +1,5 @@
 import annotations.Test;
 import annotations.TesterInfo;
-import sun.rmi.runtime.Log;
 
 @TesterInfo(createdBy = "Iliyan",
         priority = TesterInfo.Priority.HIGH,
@@ -14,7 +13,7 @@ public class TestExample {
 
     @Test
     void backendTest() {
-        if(1 < 2) {
+        if (1 < 2) {
             //this test is always passed
         }
     }

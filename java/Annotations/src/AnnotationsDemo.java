@@ -3,8 +3,6 @@ import annotations.TesterInfo;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
-import java.util.concurrent.locks.ReadWriteLock;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class AnnotationsDemo {
     public static void main(String[] args) throws Exception {
@@ -17,7 +15,7 @@ public class AnnotationsDemo {
 
         // Process @TesterInfo
         if (obj.isAnnotationPresent(TesterInfo.class)) {
-            TesterInfo testerInfo = (TesterInfo) obj.getAnnotation(TesterInfo.class);
+            TesterInfo testerInfo = obj.getAnnotation(TesterInfo.class);
 
             System.out.printf("%nPriority :%s", testerInfo.priority());
             System.out.printf("%nCreatedBy :%s", testerInfo.createdBy());

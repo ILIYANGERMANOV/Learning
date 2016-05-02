@@ -10,10 +10,6 @@ import java.lang.annotation.Target;
 public @interface TesterInfo {
     String UNKNOWN = "Unknown";
 
-    enum Priority {
-        LOW, MEDIUM, HIGH
-    }
-
     Priority priority() default Priority.MEDIUM;
 
     String[] tags();
@@ -21,4 +17,8 @@ public @interface TesterInfo {
     String createdBy() default UNKNOWN;
 
     String lastModifiedDate() default UNKNOWN;
+
+    enum Priority {
+        LOW, MEDIUM, HIGH
+    }
 }
